@@ -25,7 +25,7 @@ class Language(models.Model):
 class Algorithm(models.Model):
 
     name = models.CharField(max_length=50)
-    description = models.CharField(max_length=500)
+    description = models.CharField(max_length=500,null=True)
     langs = models.ManyToManyField(Language)
     created_at = models.DateTimeField('created_at', auto_now=True)
     updated_at = models.DateTimeField('updated_at', auto_now=True)
@@ -40,7 +40,7 @@ class Algorithm(models.Model):
 
 
 class Code(models.Model):
-	algo = models.ForeignKey(Algorithm, on_delete=models.CASCADE)
+	algo = models.ForeignKey(Algorithm, on_delete=models.CASCADE,)
 	content = models.TextField(max_length=20000, null=False)
 	lang = models.ForeignKey(Language, on_delete=models.CASCADE)
 

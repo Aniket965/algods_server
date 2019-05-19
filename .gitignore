@@ -103,3 +103,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+# Vs code settings
+.vscode
+Algo_Ds_Notes

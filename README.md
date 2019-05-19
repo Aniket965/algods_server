@@ -1,6 +1,17 @@
 # Algorithm and DS portal 
 Algorithm and Data Structure Portal [WIP] 
 
+
+### First Setup
+> this project depends on [Algopack-api](https://github.com/Aniket965/AlgoPack-api) 
+ 
+####  Setup
+ - Install Algopack-Api ``` npm install algopack -g ```
+ - Build api in root folder ``` algopack build ```
+ - Setup database from api ``` python create_db_from_repo.py ```
+
+or just Run ```./setup.sh ```
+
 ### Run Project
 ``` python manage.py  runserver ```
 
