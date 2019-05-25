@@ -22,9 +22,13 @@ class Query(object):
     all_languages = graphene.List(LanguageType)
     all_algorithms = graphene.List(AlgorithmType)
     all_code = graphene.List(CodeType)
+    all_categories = graphene.List(CategoryType)
     def resolve_all_languages(self, info, **kwargs):
         return Language.objects.all()
 
     def resolve_all_algorithms(self, info, **kwargs):
         return Algorithm.objects.all()
+
+    def resolve_all_categories(self, info, **kwargs):
+        return Category.objects.all()
         
