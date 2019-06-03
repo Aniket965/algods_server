@@ -1,6 +1,7 @@
 # Algorithm and DS portal 
-Algorithm and Data Structure server provides graphql API for algods portal [WIP] 
+![](artwork/rect_banner.png)
 
+>Algorithm and Data Structure server provides graphql API for algods portal [WIP] 
 
 ### First Setup
 > this project depends on [Algopack-api](https://github.com/Aniket965/AlgoPack-api) 
