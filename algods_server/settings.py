@@ -26,7 +26,9 @@ SECRET_KEY = '***REMOVED***'
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "algods.herokuapp.com"
+    "localhost",
+    "algods.herokuapp.com",
+
 ]
 
 
@@ -47,6 +49,7 @@ INSTALLED_APPS = [
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:4200",
     "http://127.0.0.1:4200",
+    "http://127.0.0.1:8000",
     "https://aldsin.github.io"
 ]
 

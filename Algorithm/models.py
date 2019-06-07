@@ -1,5 +1,7 @@
 from django.db import models
 
+from django.db.models.aggregates import Count
+from random import randint
 
 class Category(models.Model):
     name = models.CharField(max_length=256)
@@ -31,6 +33,11 @@ class Algorithm(models.Model):
     updated_at = models.DateTimeField('updated_at', auto_now=True)
     category = models.ForeignKey(
         Category, models.SET_NULL, blank=True, null=True)
+
+    def random(self):
+        count = self.aggregate(count= Count('id'))['count']
+        random_index = randint(0, count - 1)
+        return self.all()[random_index]
 
     def __str__(self):
         return self.name
