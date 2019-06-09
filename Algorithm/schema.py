@@ -37,7 +37,7 @@ class Query(object):
         
     def resolve_code_of_the_day(self, info, **kwagrs):
         total_count = Algorithm.objects.aggregate(count= Count('id'))['count']
-        random.seed(datetime.day.__hash__())
+        random.seed(int(datetime.today().strftime('%Y%m%d')))
         random_index = random.randint(0, total_count - 1)
         return [Algorithm.objects.all()[random_index]]
         
